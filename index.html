@@ -1,72 +1,193 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> Diploma project</title>
-    <style>
-      body{
-        font-family:Arial;
-        margin:0;
-        background:#f4f4f4;
-      }
-      header{
-        background:#24495e;
-        color:white20px;
-        padding:20px;
-        text-align:center;
-      }
-      nav{
-        background:#2c3e50;
-        padding:10px;
-        text-align:center;
-      }
-      section{
-        background:white;
-        margin:20px;
-        padding:20px;
-        border-radius:10px;
-      }
-      nav a{
-        color:white;
-        margin:15px;
-        text-decoration:none;
-        font-size:18px;
-      }
-      section{
-        background:white;
-        margin:20px;
-        padding:20px;
-        border-radius:10px;
-      }
-      footer{
-        background:#34495e;
-        color:white;
-        text-align:center;
-        padding:10px;
-        
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Diploma project website</h1>
-      <h2>Gauri Jatti</h2>
-      <p>Phalke Patil College of Engineering</p>
-      
-    </header>
+<head>
+  <title>Diploma Project</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(120deg, #89f7fe, #66a6ff);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      animation: headerSlide 2s ease-out;
+    }
+
+    @keyframes headerSlide {
+      0% { transform: translateY(-100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    nav {
+      background: #34495e;
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 15px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #f1c40f;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      color: #2c3e50;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      animation: floatText 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatText {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-20px); }
+    }
+
+    .hero img {
+      width: 120px;
+      border-radius: 50%;
+      margin-top: 15px;
+      animation: floatImage 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatImage {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-15px) rotate(5deg); }
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+    }
+
+    section {
+      background: white;
+      margin: 20px 0;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transform: translateX(-100%);
+      animation: slideIn 1s forwards;
+    }
+
+    section:nth-child(2) { animation-delay: 0.3s; }
+    section:nth-child(3) { animation-delay: 0.6s; }
+    section:nth-child(4) { animation-delay: 0.9s; }
+
+    @keyframes slideIn {
+      0% { transform: translateX(-100%); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 25px;
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: transform 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      animation: footerSlide 2s ease-out;
+    }
+
+    @keyframes footerSlide {
+      0% { transform: translateY(100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Diploma Project Website</h1>
+    <h2>Gauri Jatti</h2>
+    <p>Phalke Patil College of Engineering</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Project</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Welcome to My Project</h2>
+    <p>Passionate About Web Development 💻</p>
+    <img src="https://via.placeholder.com/120" alt="profile">
+  </div>
+
+  <div class="container">
     <section>
       <h2>Project Information</h2>
-      <p>Project Name:Website Development</p>
-      <p>Tchnology:HTML&CSS</p>
-      <p>Year:2026</p>
+      <p><b>Project Name:</b> Website Development</p>
+      <p><b>Technology:</b> HTML & CSS</p>
+      <p><b>Year:</b> 2026</p>
+      <a href="#" class="btn">View Project</a>
     </section>
+
+    <section>
+      <h2>About Me</h2>
+      <p>Hello! I am Gauri Jatti, a diploma student passionate about web development.</p>
+    </section>
+
+    <section>
+      <h2>My Skills</h2>
+      <p>HTML: 90%</p>
+      <div style="background:#ddd;border-radius:20px;">
+        <div style="width:90%;background:#e67e22;padding:8px;color:white;border-radius:20px;">90%</div>
+      </div>
+
+      <p>CSS: 80%</p>
+      <div style="background:#ddd;border-radius:20px;">
+        <div style="width:80%;background:#3498db;padding:8px;color:white;border-radius:20px;">80%</div>
+      </div>
+    </section>
+
     <section>
       <h2>Contact</h2>
-      <p>Email:student@email.com</p>
-      <p>Phone:1234567890</p>
+      <p>Email: <a href="mailto:gaurijatti111@gmail.com">gaurijatti111@gmail.com</a></p>
+      <p>Phone: <a href="tel:9209320274">9209320274</a></p>
     </section>
-    <footer>
-      <p>Created by Gauri Jatti</p>
-    </footer>
-    
-  </body> 
-  
+  </div>
+
+  <footer>
+    <p>Created by Gauri Jatti | © 2026</p>
+  </footer>
+
+</body>
 </html>
